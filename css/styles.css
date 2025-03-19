@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e1ff;
+}
+
+nav { /* barre de navigation */
+    background-color: #c060e0;
+    padding: 15px;
+    text-align: left;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    height: 100%;
+    padding: 14px 16px;
+}
+
+nav a:hover {
+    background-color: #af49d1;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    color: #a020f0;
+}
+
+.box { /* div */
+    background-color: #f0d0ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #c060e0;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.icon { /* mini-icônes à la place des listes */
+    width: 20px;
+    margin-right: 5px; /* petit espace pour donner un espace entre l'icône et le texte à côté */
+}
+
+.competences { /* ul */
+    list-style-type: none; /* Enlève les puces par défaut */
+}
+
+.competences li {
+    display: flex;
+    align-items: center;
+}
+
+.project, #about-me { /* Div pour chaque projet et div pour la section "à propos de moi" */
+    display: flex;
+}
+
+.description { /* Div pour la description de chaque projet */
+    background-color: #f0d0ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+}
+
+.illustration {
+    border: 5px solid #c973f1;
+    border-radius: 5px;
+}
