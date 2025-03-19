@@ -1,0 +1,54 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - E-Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+    </nav>
+    <section class="content">
+        <h2>Prévoir la production d'électricité éolienne en France</h2>
+        <div class="project">
+            <div class="description" style="width:55%;">
+                <p>Pour mieux comprendre la transition énergétique en France, j'ai analysé en binôme la production d'électricité éolienne en France entre 2001 et 2023 pour prévoir la production en 2024.</p>
+                <p>Comme l'augmentation de la production n'était pas linéaire, on a ramené les données à une échelle logarithmique pour prendre en compte l'augmentation exponentielle. On a ensuite décomposé les données en tendance, variations saisonnières, et résidus, pour voir précisément les variations au fil d'une année, ce qui nous a donné le graphique ci-dessous.</p>
+                <img src="images/Decomposition_serie_temporelle.png" alt="Décomposition de la série temporelle" style="width:60%;">
+                <p>Enfin, on comparé plusieurs méthodes de prévisions différentes: une simple régression en utilisant la tendance et en rajoutant les variations saisonnières (représentée en violet à droite), le modèle ARMA qui prend en compte les moyennes des années 2022 et 2023 (représentée en rouge), et la méthode Holt-Winters (en bleu) qui est faite pour prendre en compte la saisonnalité.</p>
+                <p>Le résultat est une comparaison des différentes méthodes que l'on peut utiliser pour prévoir des données en fonction d'un dataset avec des variations saisonnières.</p>
+            </div>
+            <img class="illustration" src="images/Previsions.png" alt="Prévisions de la production d'électricité éolienne en France en 2024" style="height:50%;">
+        </div>
+        <h2>Comprendre l'impact d'une mise à jour: analyse des retours des joueurs</h2>
+        <div class="project">
+            <div class="description" style="width:65%;">
+                <p>Pour mieux comprendre l'impact d'une mise à jour d'un serveur Minecraft, j'ai lancé une enquête visant à comprendre comment les communautés de ce serveur ont réagi à la mise à jour controversée. Un an plus tard, je voulais savoir si les avis avaient changé.</p>
+                <p>J'ai crée un formulaire pour à <b>comprendre l'évolution des opinions entre 2023 et 2024</b>, avec une douzaine de questions pour mesurer l'impact de la mise à jour sur les communautés. Par exemple, j'ai demandé leur avis sur la mise à jour à sa sortie, puis un an plus tard. Le formulaire comprenait aussi des questions ouvertes, pour avoir une idée de ce que les joueurs aimeraient voir sur le serveur.</p>
+                <p>Un défi particulier a été de <b>récolter des réponses assez variées,</b> couvrant à la fois les grandes communautés ainsi que les petites (comme celles des mini-jeux moins connus). Il fallait aussi équilibrer les avis des joueurs expérimentés et des nouveaux joueurs. N'ayant pas accès à toutes les communautés, j'ai sollicité certains représentants (ou joueurs plus influents) pour transmettre le questionnaire aux joueurs concernés.</p>
+                <p>Enfin, pour résumer les 60 réponses des communautés variées, j'ai produit <a href="https://www.youtube.com/watch?v=jr-VOTwC-LE" target="_blank">une vidéo YouTube</a> pour exposer les résultats de l'enquête: ce qui a été apprécié, ce qui a moins bien fonctionné, et des suggestions pour le futur.</p>
+                <img src="images/UpdateVid.png" alt="Capture d'écran de la vidéo explicative" style="width:40%;">
+            </div>
+            <img class="illustration" style="width:30%;" src="images/ArcadeUpdateForm.png" alt="Exemple de questions posées">
+        </div>
+        <h2>Peut-on battre un record sans chance?</h2>
+        <div class="project">
+            <div class="description" style="width:55%;">
+                <p><b>Lab Escape</b> est un mini-jeu de Party Games sur <a href="https://fr.wikipedia.org/wiki/Hypixel">Hypixel</a> où il faut s'échapper d'un laboratoire le plus vite possible en détruisant des blocs dont la distribution est aléatoire. Cependant, la configuration des blocs a une grande influence sur le temps que cela prend. <b>Mais à quel point la chance joue-t-elle un rôle?</b></p>
+                <p>Pour répondre à cette question, j'ai simulé grâce à Python <b>un million</b> de parties de Lab Escape. Chaque bloc prend un temps différent à détruire, par exemple, une partie avec plus de <b>terre</b> que de <b>bois</b> se terminera plus vite, tandis qu'une partie avec plus de bois que de terre sera plus lente à finir. J'ai donc déduit le temps minimum possible pour chaque simulation. J'ai ensuite représenté ces données sous R, ce qui a donné cette distribution en cloche. Pour espérer battre le record, il faut une configuration de blocs permettant un temps représenté ici par le point rouge... soit un point à plus de 4.5 écarts-types.</p>
+                <p>Pour avoir un ordre de grandeur, j'ai écrit une fonction R pour calculer à quelle fréquence on peut espérer une telle configuration:</p>
+                <img src="images/TimesFasterThan.png" alt="0.001% des parties ont une meilleure configuration.">
+                <p>C'est-à-dire deux fois sur un million de parties. Cependant, avoir cette chance ne suffit pas, car il faut ensuite une exécution quasi-parfaite. De même, on ne peut pas espérér battre le record si on a trop de mauvais blocs, même avec une exécution parfaite.</p>
+            </div>
+            <img class="illustration" style="width:40%;" src="images/DistributionLabEscape.png" alt="Distribution des temps minimaux">
+        </div>
+    </section>
+    <footer>
+        <p>Me contacter:</p>
+        <p><img src="images/Email-logo.png" alt="Icône e-mail" class="icon"> <a href="mailto:nils@nils-anderson.fr">nils@nils-anderson.fr</a></p>
+        <p><img src="images/Linkedin-logo.png" alt="Logo de Linkedin" class="icon"> <a href="https://www.linkedin.com/in/nils-anderson-115925306/" target="_blank">Nils Anderson</a></p>
+    </footer>
+</body>
+</html>
